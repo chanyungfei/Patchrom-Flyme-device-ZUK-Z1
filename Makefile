@@ -47,7 +47,7 @@ vendor_modify_images := boot
 # The default value is nothing.
 # You can configure the file name which relative to the vendor/system directory.
 #-----------------------------------------------------------------------------
-#vendor_remove_files := bin/zchgd
+vendor_remove_files := recovery-from-boot.bak
 
 ##############################################################################
 # The value decides the vendor apk which you want to save in the vendor directory for the ota package.
@@ -56,7 +56,8 @@ vendor_modify_images := boot
 #-----------------------------------------------------------------------------
 vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider BackupRestoreConfirmation \
                      FusedLocation PrintSpooler SharedStorageBackup  ExternalStorageProvider InputDevices \
-                     ProxyHandler Shell DefaultContainerService WAPPushManager Stk TimeService qcrilmsgtunnel
+                     ProxyHandler Shell DefaultContainerService WAPPushManager Stk TimeService qcrilmsgtunnel \
+		     BluetoothExt qcrilmsgtunnel QuickBoot shutdownlistener CMSettingsProvider com.qualcomm.location
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -96,7 +97,7 @@ board_saved_files := lib/libwebviewchromium.so bin/bootanimation bin/shutdownani
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-board_remove_apps := LogReport NfcNci
+board_remove_apps := NfcNci
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
