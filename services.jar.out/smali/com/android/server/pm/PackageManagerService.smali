@@ -58984,3 +58984,201 @@
 
     throw v3
 .end method
+
+.method static final sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
+    .locals 18
+    .param p0, "action"    # Ljava/lang/String;
+    .param p1, "pkg"    # Ljava/lang/String;
+    .param p2, "extras"    # Landroid/os/Bundle;
+    .param p3, "targetPkg"    # Ljava/lang/String;
+    .param p4, "finishedReceiver"    # Landroid/content/IIntentReceiver;
+    .param p5, "userIds"    # [I
+
+    .prologue
+    .line 7968
+    invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
+
+    move-result-object v1
+
+    .line 7969
+    .local v1, "am":Landroid/app/IActivityManager;
+    if-eqz v1, :cond_6
+
+    .line 7971
+    if-nez p5, :cond_0
+
+    .line 7972
+    :try_start_0
+    invoke-interface {v1}, Landroid/app/IActivityManager;->getRunningUserIds()[I
+
+    move-result-object p5
+
+    .line 7974
+    :cond_0
+    move-object/from16 v14, p5
+
+    .local v14, "arr$":[I
+    array-length v0, v14
+
+    move/from16 v16, v0
+
+    .local v16, "len$":I
+    const/4 v15, 0x0
+
+    .local v15, "i$":I
+    :goto_0
+    move/from16 v0, v16
+
+    if-ge v15, v0, :cond_6
+
+    aget v13, v14, v15
+
+    .line 7975
+    .local v13, "id":I
+    new-instance v3, Landroid/content/Intent;
+
+    if-eqz p1, :cond_4
+
+    const-string v2, "package"
+
+    const/4 v4, 0x0
+
+    move-object/from16 v0, p1
+
+    invoke-static {v2, v0, v4}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    :goto_1
+    move-object/from16 v0, p0
+
+    invoke-direct {v3, v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    .line 7977
+    .local v3, "intent":Landroid/content/Intent;
+    if-eqz p2, :cond_1
+
+    .line 7978
+    move-object/from16 v0, p2
+
+    invoke-virtual {v3, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    .line 7980
+    :cond_1
+    if-eqz p3, :cond_2
+
+    .line 7981
+    move-object/from16 v0, p3
+
+    invoke-virtual {v3, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 7984
+    :cond_2
+    const-string v2, "android.intent.extra.UID"
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v3, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v17
+
+    .line 7985
+    .local v17, "uid":I
+    if-lez v17, :cond_3
+
+    invoke-static/range {v17 .. v17}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v2
+
+    if-eq v2, v13, :cond_3
+
+    .line 7986
+    invoke-static/range {v17 .. v17}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v2
+
+    invoke-static {v13, v2}, Landroid/os/UserHandle;->getUid(II)I
+
+    move-result v17
+
+    .line 7987
+    const-string v2, "android.intent.extra.UID"
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 7989
+    :cond_3
+    const-string v2, "android.intent.extra.user_handle"
+
+    invoke-virtual {v3, v2, v13}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 7990
+    const/high16 v2, 0x4000000
+
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 7998
+    const/4 v2, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, -0x1
+
+    if-eqz p4, :cond_5
+
+    const/4 v11, 0x1
+
+    :goto_2
+    const/4 v12, 0x0
+
+    move-object/from16 v5, p4
+
+    invoke-interface/range {v1 .. v13}, Landroid/app/IActivityManager;->broadcastIntent(Landroid/app/IApplicationThread;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;Ljava/lang/String;IZZI)I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 7974
+    add-int/lit8 v15, v15, 0x1
+
+    goto :goto_0
+
+    .line 7975
+    .end local v3    # "intent":Landroid/content/Intent;
+    .end local v17    # "uid":I
+    :cond_4
+    const/4 v2, 0x0
+
+    goto :goto_1
+
+    .line 7998
+    .restart local v3    # "intent":Landroid/content/Intent;
+    .restart local v17    # "uid":I
+    :cond_5
+    const/4 v11, 0x0
+
+    goto :goto_2
+
+    .line 8002
+    .end local v3    # "intent":Landroid/content/Intent;
+    .end local v13    # "id":I
+    .end local v14    # "arr$":[I
+    .end local v15    # "i$":I
+    .end local v16    # "len$":I
+    .end local v17    # "uid":I
+    :catch_0
+    move-exception v2
+
+    .line 8005
+    :cond_6
+    return-void
+.end method
