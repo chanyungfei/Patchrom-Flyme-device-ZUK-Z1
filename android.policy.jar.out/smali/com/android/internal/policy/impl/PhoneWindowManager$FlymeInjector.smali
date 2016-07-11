@@ -314,25 +314,21 @@
 
     goto :goto_1
 
-    .line 6647
     :cond_6
     const/4 v4, 0x5
 
     if-ne p2, v4, :cond_7
 
-    .line 6648
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->hasAppShownWindows()Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    .line 6649
-    const v1, 0x10a0011
+    const v1, #android:anim@app_starting_exit#t
 
     goto :goto_1
 
-    .line 6651
     :cond_7
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
