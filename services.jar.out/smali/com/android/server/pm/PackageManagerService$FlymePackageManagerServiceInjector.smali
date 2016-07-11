@@ -829,82 +829,68 @@
 
     iput-object v1, v0, Landroid/content/pm/ActivityInfo;->processName:Ljava/lang/String;
 
-    .line 13933
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->launchMode:I
 
-    .line 13934
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
     const/16 v1, 0x20
 
     iput v1, v0, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 13935
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
     iput v3, v0, Landroid/content/pm/ActivityInfo;->screenOrientation:I
 
-    .line 13936
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->mFlymeActivityInfo:Landroid/content/ActivityInfoExt;
 
     iput-boolean v2, v0, Landroid/content/ActivityInfoExt;->needAccessControl:Z
 
-    .line 13937
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
-    sget v1, Lcom/flyme/internal/R$style;->Theme_Flyme_Light_AccessControl:I
+    const v1, #android:style@Theme.Light.NoTitleBar#t
 
     iput v1, v0, Landroid/content/pm/ActivityInfo;->theme:I
 
-    .line 13938
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
     const/16 v1, 0x480
 
     iput v1, v0, Landroid/content/pm/ActivityInfo;->configChanges:I
 
-    .line 13939
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
     iput-boolean v3, v0, Landroid/content/pm/ActivityInfo;->exported:Z
 
-    .line 13940
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
     iput-boolean v3, v0, Landroid/content/pm/ActivityInfo;->enabled:Z
 
-    .line 13941
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessInfo:Landroid/content/pm/ResolveInfo;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
     iput-object v1, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 13942
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessInfo:Landroid/content/pm/ResolveInfo;
 
     iput v2, v0, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 13943
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessInfo:Landroid/content/pm/ResolveInfo;
 
     iput v2, v0, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 13944
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessInfo:Landroid/content/pm/ResolveInfo;
 
     iput v2, v0, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 13945
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mAccessActivity:Landroid/content/pm/ActivityInfo;
 
     iput v3, v0, Landroid/content/pm/ActivityInfo;->uiOptions:I
 
-    .line 13946
     new-instance v0, Landroid/content/ComponentName;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService;->mAndroidApplication:Landroid/content/pm/ApplicationInfo;
