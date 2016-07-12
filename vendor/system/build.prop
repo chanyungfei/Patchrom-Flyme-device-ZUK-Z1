@@ -13,11 +13,11 @@ ro.build.version.base_os=
 ro.build.date=2016年 05月 24日 星期二 10:35:02 CST
 ro.build.date.utc=1464057302
 ro.build.type=userdebug
-ro.build.user=qq718986984
-ro.build.host=ZUK-Z1
+ro.build.user=yaphet
+ro.build.host=k640e
 ro.build.tags=test-keys
 ro.build.flavor=cm_ham-userdebug
-ro.product.brand=zuk
+ro.product.brand=ZUK
 ro.product.name=ham
 ro.product.board=MSM8974
 # ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,
@@ -27,18 +27,18 @@ ro.product.cpu.abi2=armeabi
 ro.product.cpu.abilist=armeabi-v7a,armeabi
 ro.product.cpu.abilist32=armeabi-v7a,armeabi
 ro.product.cpu.abilist64=
-ro.product.manufacturer=Zuk
+ro.product.manufacturer=ZUK
 ro.product.locale.language=zh
 ro.product.locale.region=CN
 ro.wifi.channels=
 ro.board.platform=msm8974
 # ro.build.product is obsolete; use ro.product.device
 ro.build.product=Z1
-ro.product.model=Z1
+ro.product.model=ZUK Z1
 ro.product.device=Z1
 # Do not try to parse description, fingerprint, or thumbprint
 ro.build.description=ham-userdebug 5.1.1 LMY49J 125723221b test-keys
-ro.build.fingerprint=zuk/ham/Z1:5.1.1/LMY49J/125723221b:userdebug/test-keys
+ro.build.fingerprint=ZUK/ham/Z1:5.1.1/LMY49J/125723221b:userdebug/test-keys
 ro.build.characteristics=default
 ro.cm.device=ham
 # end build properties
