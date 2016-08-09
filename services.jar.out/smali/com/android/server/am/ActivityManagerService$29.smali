@@ -31,7 +31,7 @@
     .locals 0
 
     .prologue
-    .line 19744
+    .line 19742
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$29;->val$uss:Lcom/android/server/am/UserStartedState;
@@ -60,14 +60,14 @@
     .param p7, "sendingUser"    # I
 
     .prologue
-    .line 19749
+    .line 19747
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v2
 
-    .line 19750
+    .line 19748
     :try_start_0
     move-object/from16 v0, p0
 
@@ -79,14 +79,14 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 19752
+    .line 19750
     monitor-exit v2
 
-    .line 19763
+    .line 19761
     :goto_0
     return-void
 
-    .line 19754
+    .line 19752
     :cond_0
     move-object/from16 v0, p0
 
@@ -96,12 +96,12 @@
 
     iput v3, v1, Lcom/android/server/am/UserStartedState;->mState:I
 
-    .line 19755
+    .line 19753
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 19756
+    .line 19754
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -124,7 +124,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/android/server/am/BatteryStatsService;->noteEvent(ILjava/lang/String;I)V
 
-    .line 19759
+    .line 19757
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -137,7 +137,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/SystemServiceManager;->stopUser(I)V
 
-    .line 19760
+    .line 19758
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -185,7 +185,7 @@
 
     goto :goto_0
 
-    .line 19755
+    .line 19753
     :catchall_0
     move-exception v1
 

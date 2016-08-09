@@ -13,8 +13,7 @@ system/app/PicoTts/lib/arm/libttspico.so|/system/lib/libttspico.so
 system/app/PrintSpooler/lib/arm/libprintspooler_jni.so|/system/lib/libprintspooler_jni.so
 system/app/Terminal/lib/arm/libjni_terminal.so|/system/lib/libjni_terminal.so
 system/app/webview/lib/arm/libwebviewchromium.so|/system/lib/libwebviewchromium.so
-system/bin/app_process32|/system/xbin/daemonsu
-system/bin/app_process|/system/xbin/daemonsu
+system/bin/app_process|app_process32
 system/bin/cat|toolbox
 system/bin/chcon|toolbox
 system/bin/chmod|toolbox
@@ -39,7 +38,6 @@ system/bin/id|toolbox
 system/bin/ifconfig|toolbox
 system/bin/iftop|toolbox
 system/bin/insmod|toolbox
-system/bin/install-recovery.sh|/system/etc/install-recovery.sh
 system/bin/ioctl|toolbox
 system/bin/ionice|toolbox
 system/bin/kill|toolbox

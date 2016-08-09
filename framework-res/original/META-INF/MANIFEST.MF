@@ -2340,7 +2340,7 @@ Name: res/drawable-mdpi-v4/pointer_stylus_hover_icon.xml
 SHA1-Digest: GmqVVm8Pm9UcVgX+3O5HgroE2H0=
 
 Name: res/drawable-xhdpi-v4/tab_selected_bar_right_v4.9.png
-SHA1-Digest: kpNPbmRLHcgC+0KGb3frTLAa2QA=
+SHA1-Digest: C+7q2uHMZaL8hmUB+uGLnu7/YeQ=
 
 Name: res/raw-tr/loaderror.html
 SHA1-Digest: eWHbrfvZqMTJHIiPvg0lDqZcaqo=
@@ -2564,7 +2564,7 @@ Name: res/drawable-xxhdpi-v4/btn_radio_to_off_mtrl_015.png
 SHA1-Digest: 53DYKltMU34zhaYZHtlNZkme+Co=
 
 Name: AndroidManifest.xml
-SHA1-Digest: n5EgLfFJE/8vYZWhxIutcpKKltk=
+SHA1-Digest: 5zMZhPz8dKWkgWFxotFUv+m5g4U=
 
 Name: res/drawable/ic_find_next_material.xml
 SHA1-Digest: JCExZl8YSD5I4Xwk5r+VPAboOZ0=
@@ -6560,7 +6560,7 @@ Name: res/drawable-xhdpi-v4/title_bar_medium.9.png
 SHA1-Digest: aCgRAzVimydYUeAumLhXkOOYPNE=
 
 Name: res/drawable-xhdpi-v4/tab_selected_bar_left_v4.9.png
-SHA1-Digest: kpNPbmRLHcgC+0KGb3frTLAa2QA=
+SHA1-Digest: C+7q2uHMZaL8hmUB+uGLnu7/YeQ=
 
 Name: res/drawable-xxhdpi-v4/btn_switch_to_off_mtrl_00001.9.png
 SHA1-Digest: 1oBfEBD2Q46ckZTgYGVMTf168vQ=
@@ -7422,7 +7422,7 @@ Name: res/drawable-xxhdpi-v4/ic_menu_always_landscape_portrait.png
 SHA1-Digest: h3XXGafPSnXT+7QkX+o/I8Jj1cA=
 
 Name: resources.arsc
-SHA1-Digest: H+9ruTj37ddsXAR1JJcaiJTsLT8=
+SHA1-Digest: TMoKBBZk6zVFXaS+v1kSrcO0uK8=
 
 Name: res/drawable/notification_material_media_action_background.xml
 SHA1-Digest: J9rtpTFTvlHcfPgUzQG/3f+wQos=

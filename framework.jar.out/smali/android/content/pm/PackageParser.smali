@@ -11,7 +11,6 @@
         Landroid/content/pm/PackageParser$ProviderIntentInfo;,
         Landroid/content/pm/PackageParser$ServiceIntentInfo;,
         Landroid/content/pm/PackageParser$ActivityIntentInfo;,
-        Landroid/content/pm/PackageParser$FlymeInjector;,
         Landroid/content/pm/PackageParser$IntentInfo;,
         Landroid/content/pm/PackageParser$Instrumentation;,
         Landroid/content/pm/PackageParser$Provider;,
@@ -4647,10 +4646,6 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->uiOptions:I
 
-    move-object/from16 v0, v23
-
-    invoke-static {v14, v0}, Landroid/content/pm/PackageParser$FlymeInjector;->parseAccessArgsFromResource(Landroid/content/pm/PackageParser$Activity;Landroid/content/res/TypedArray;)V
-
     .line 3169
     const/16 v2, 0x1b
 
@@ -5551,7 +5546,6 @@
     .local v20, "outerDepth":I
     :cond_1f
     :goto_7
-    :goto_flyme_0
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v26
@@ -5976,17 +5970,14 @@
 
     iput-object v2, v14, Landroid/content/pm/PackageParser$Activity;->metaData:Landroid/os/Bundle;
 
-    if-nez v2, :cond_flyme_0
+    if-nez v2, :cond_1f
 
+    .line 3416
     const/4 v14, 0x0
 
     goto/16 :goto_1
 
-    :cond_flyme_0
-    invoke-static/range {v14 .. v14}, Landroid/content/pm/PackageParser$FlymeInjector;->parseAccessMetaFromResource(Landroid/content/pm/PackageParser$Activity;)V
-
-    goto/16 :goto_flyme_0
-
+    .line 3420
     :cond_2c
     const-string v2, "PackageParser"
 
@@ -6642,12 +6633,6 @@
     move-object/from16 v0, v17
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->maxRecents:I
-
-    move-object/from16 v0, v17
-
-    move-object/from16 v1, v25
-
-    invoke-static {v0, v1}, Landroid/content/pm/PackageParser$FlymeInjector;->copyAccessArgs(Landroid/content/pm/ActivityInfo;Landroid/content/pm/PackageParser$Activity;)V
 
     .line 3529
     new-instance v15, Landroid/content/pm/PackageParser$Activity;
@@ -11629,7 +11614,7 @@
 
     .line 2581
     .local v25, "pkgName":Ljava/lang/String;
-    const v3, #android:array@non_themeable_packages#t
+    const v3, 0x1070014
 
     move-object/from16 v0, p2
 
@@ -21812,28 +21797,20 @@
     .param p1, "requiresSeparator"    # Z
 
     .prologue
-    invoke-static/range {p0 .. p0}, Landroid/content/pm/PackageParser$FlymeInjector;->validateName(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_flyme_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :cond_flyme_0
-
+    .line 1300
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
+    .line 1301
     .local v0, "N":I
     const/4 v3, 0x0
 
+    .line 1302
     .local v3, "hasSep":Z
     const/4 v2, 0x1
 
+    .line 1303
     .local v2, "front":Z
     const/4 v4, 0x0
 

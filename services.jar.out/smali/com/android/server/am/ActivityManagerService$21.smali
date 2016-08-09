@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 14244
+    .line 14242
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +46,7 @@
     .param p2, "rhs"    # Lcom/android/server/am/ActivityManagerService$MemItem;
 
     .prologue
-    .line 14247
+    .line 14245
     iget-wide v0, p1, Lcom/android/server/am/ActivityManagerService$MemItem;->pss:J
 
     iget-wide v2, p2, Lcom/android/server/am/ActivityManagerService$MemItem;->pss:J
@@ -55,14 +55,14 @@
 
     if-gez v0, :cond_0
 
-    .line 14248
+    .line 14246
     const/4 v0, 0x1
 
-    .line 14252
+    .line 14250
     :goto_0
     return v0
 
-    .line 14249
+    .line 14247
     :cond_0
     iget-wide v0, p1, Lcom/android/server/am/ActivityManagerService$MemItem;->pss:J
 
@@ -72,12 +72,12 @@
 
     if-lez v0, :cond_1
 
-    .line 14250
+    .line 14248
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 14252
+    .line 14250
     :cond_1
     const/4 v0, 0x0
 
@@ -88,7 +88,7 @@
     .locals 1
 
     .prologue
-    .line 14244
+    .line 14242
     check-cast p1, Lcom/android/server/am/ActivityManagerService$MemItem;
 
     check-cast p2, Lcom/android/server/am/ActivityManagerService$MemItem;

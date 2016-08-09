@@ -7,7 +7,6 @@ ro.allow.mock.location=0
 ro.debuggable=1
 ro.zygote=zygote32
 persist.sys.usb.config=mtp
-persist.usb.hvdcp.detect=true
 camera2.portability.force_api=1
 dalvik.vm.dex2oat-Xms=64m
 dalvik.vm.dex2oat-Xmx=512m

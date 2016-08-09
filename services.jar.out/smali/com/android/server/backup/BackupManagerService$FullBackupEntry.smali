@@ -42,18 +42,18 @@
     .param p3, "when"    # J
 
     .prologue
-    .line 622
+    .line 626
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 623
+    .line 627
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;->packageName:Ljava/lang/String;
 
-    .line 624
+    .line 628
     iput-wide p3, p0, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;->lastBackup:J
 
-    .line 625
+    .line 629
     return-void
 .end method
 
@@ -64,7 +64,7 @@
     .param p1, "other"    # Lcom/android/server/backup/BackupManagerService$FullBackupEntry;
 
     .prologue
-    .line 629
+    .line 633
     iget-wide v0, p0, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;->lastBackup:J
 
     iget-wide v2, p1, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;->lastBackup:J
@@ -75,11 +75,11 @@
 
     const/4 v0, -0x1
 
-    .line 631
+    .line 635
     :goto_0
     return v0
 
-    .line 630
+    .line 634
     :cond_0
     iget-wide v0, p0, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;->lastBackup:J
 
@@ -93,7 +93,7 @@
 
     goto :goto_0
 
-    .line 631
+    .line 635
     :cond_1
     const/4 v0, 0x0
 
@@ -104,7 +104,7 @@
     .locals 1
 
     .prologue
-    .line 618
+    .line 622
     check-cast p1, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;
 
     invoke-virtual {p0, p1}, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;->compareTo(Lcom/android/server/backup/BackupManagerService$FullBackupEntry;)I

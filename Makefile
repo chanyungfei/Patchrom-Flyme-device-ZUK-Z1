@@ -57,7 +57,8 @@ vendor_remove_files := recovery-from-boot.bak
 vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider BackupRestoreConfirmation \
                      FusedLocation PrintSpooler SharedStorageBackup  ExternalStorageProvider InputDevices \
                      ProxyHandler Shell DefaultContainerService WAPPushManager Stk TimeService qcrilmsgtunnel \
-		     BluetoothExt qcrilmsgtunnel QuickBoot shutdownlistener CMSettingsProvider com.qualcomm.location
+		     BluetoothExt Camera2 CMSettingsProvider qcrilmsgtunnel QuickBoot shutdownlistener \
+		     com.qualcomm.location
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -109,7 +110,7 @@ board_remove_apps := NfcNci
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-board_modify_apps := SystemUI Telecom TeleService
+#board_modify_apps := TeleService
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
@@ -159,7 +160,7 @@ override_property += \
 # Set it to be false when you want to escape the verification.
 # Default: true
 #-----------------------------------------------------------------------------
-USE_ASSERTIONS_IN_UPDATER_SCRIPT := false
+#USE_ASSERTIONS_IN_UPDATER_SCRIPT := false
 
 ##############################################################################
 # Defines whether reduces useless resources, only keep the resources of preferred configuration, like current density or locale.

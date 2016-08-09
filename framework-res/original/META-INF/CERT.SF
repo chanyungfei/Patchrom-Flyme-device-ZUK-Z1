@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android SignApk)
-SHA1-Digest-Manifest: YDKL4f3dxHoXIeWHknIqordJGlg=
+SHA1-Digest-Manifest: OieiY9RJ65+up8bSTcC7KomHlbk=
 
 Name: res/color/date_picker_calendar_holo_dark.xml
 SHA1-Digest-Manifest: WupPXu7oiNHkbn8g65z5Nmx97X8=
@@ -2341,7 +2341,7 @@ Name: res/drawable-mdpi-v4/pointer_stylus_hover_icon.xml
 SHA1-Digest-Manifest: /K3TzduTtFvtAOLCkMfn/IIjyns=
 
 Name: res/drawable-xhdpi-v4/tab_selected_bar_right_v4.9.png
-SHA1-Digest-Manifest: xYgVujEqod5Z4+Guoschef+ocRQ=
+SHA1-Digest-Manifest: Oh2imt86pzL6G/RmgtAgyEWTaPY=
 
 Name: res/raw-tr/loaderror.html
 SHA1-Digest-Manifest: f55icm4bfpxAQsY8cUHLJ8Q/92w=
@@ -2565,7 +2565,7 @@ Name: res/drawable-xxhdpi-v4/btn_radio_to_off_mtrl_015.png
 SHA1-Digest-Manifest: BVY2FmnW7QYc6JgRYwhFFNWn6Po=
 
 Name: AndroidManifest.xml
-SHA1-Digest-Manifest: BhG04Ahclc/Rvi4Y7hu2hN02Alg=
+SHA1-Digest-Manifest: llYvviMhT2rrSQPw2wcCRp9VsoE=
 
 Name: res/drawable/ic_find_next_material.xml
 SHA1-Digest-Manifest: cKzq8OsX6RV0jDRn0tE6lkmheS4=
@@ -6561,7 +6561,7 @@ Name: res/drawable-xhdpi-v4/divider_vertical_bright_opaque.9.png
 SHA1-Digest-Manifest: VIYlMz3w5FN26XtaKv23o5Eb+tE=
 
 Name: res/drawable-xhdpi-v4/tab_selected_bar_left_v4.9.png
-SHA1-Digest-Manifest: taODXcFBg+zyzDDXbDg2q1G4Q2s=
+SHA1-Digest-Manifest: HIGy0WAlUBePftU4WlYNUIjD0VM=
 
 Name: res/drawable-xxhdpi-v4/btn_switch_to_off_mtrl_00001.9.png
 SHA1-Digest-Manifest: Dy8crREvGRkD8rsoI6T0L08DL5E=
@@ -7426,7 +7426,7 @@ Name: res/drawable/notification_material_media_action_background.xml
 SHA1-Digest-Manifest: 8lG6DFjmHaCXw3ocvXT0m754UNE=
 
 Name: resources.arsc
-SHA1-Digest-Manifest: nxG7Mt6Gp6nFADOEK9ivXOO/+8c=
+SHA1-Digest-Manifest: SBcqjkDtVJoPEFl5lsc6Gj058ts=
 
 Name: res/drawable-xhdpi-v4/btn_keyboard_key_dark_normal_on_holo.9.png
 SHA1-Digest-Manifest: URs2e0VsW62FSCn0sT3tSynA7QY=

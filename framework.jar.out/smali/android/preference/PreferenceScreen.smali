@@ -10,15 +10,12 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/preference/PreferenceScreen$FlymeInjector;,
         Landroid/preference/PreferenceScreen$SavedState;
     }
 .end annotation
 
 
 # instance fields
-.field mFlymeShowBottomDivider:Z
-
 .field private mDialog:Landroid/app/Dialog;
 
 .field private mListView:Landroid/widget/ListView;
@@ -33,12 +30,12 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    const v0, #android:attr@preferenceScreenStyle#t
+    .line 100
+    const v0, 0x101008b
 
     invoke-direct {p0, p1, p2, v0}, Landroid/preference/PreferenceGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-static/range {p0 .. p0}, Landroid/preference/PreferenceScreen$FlymeInjector;->initFlymeExtraFields(Landroid/preference/PreferenceScreen;)V
-
+    .line 101
     return-void
 .end method
 
@@ -77,7 +74,7 @@
 
     .line 166
     .local v3, "inflater":Landroid/view/LayoutInflater;
-    const v5, #android:layout@preference_list_fragment#t
+    const v5, 0x109009f
 
     invoke-virtual {v3, v5, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -85,7 +82,7 @@
 
     .line 168
     .local v0, "childPrefScreen":Landroid/view/View;
-    const v5, #android:id@list#t
+    const v5, 0x102000a
 
     invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -175,18 +172,20 @@
     .param p1, "listView"    # Landroid/widget/ListView;
 
     .prologue
+    .line 143
     invoke-virtual {p1, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
+    .line 144
     invoke-virtual {p0}, Landroid/preference/PreferenceScreen;->getRootAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    invoke-static/range {p0 .. p1}, Landroid/preference/PreferenceScreen$FlymeInjector;->flymeBindListView(Landroid/preference/PreferenceScreen;Landroid/widget/ListView;)V
-
+    .line 146
     invoke-virtual {p0}, Landroid/preference/PreferenceScreen;->onAttachedToActivity()V
 
+    .line 147
     return-void
 .end method
 
@@ -354,8 +353,6 @@
 
     .line 214
     .local v1, "preference":Landroid/preference/Preference;
-    invoke-static {p0, p2, p3}, Landroid/preference/PreferenceScreen$FlymeInjector;->flymeSetPreferenceView(Landroid/preference/PreferenceScreen;Landroid/view/View;I)V
-
     invoke-virtual {v1, p0}, Landroid/preference/Preference;->performClick(Landroid/preference/PreferenceScreen;)V
 
     goto :goto_0
@@ -467,23 +464,4 @@
     iput-object v3, v1, Landroid/preference/PreferenceScreen$SavedState;->dialogBundle:Landroid/os/Bundle;
 
     goto :goto_0
-.end method
-
-.method flymeGetFieldRootAdapter()Landroid/widget/ListAdapter;
-    .locals 1
-
-    .prologue
-    iget-object v0, p0, Landroid/preference/PreferenceScreen;->mRootAdapter:Landroid/widget/ListAdapter;
-
-    return-object v0
-.end method
-
-.method public showBottomDivider(Z)V
-    .locals 0
-    .param p1, "show"    # Z
-
-    .prologue
-    iput-boolean p1, p0, Landroid/preference/PreferenceScreen;->mFlymeShowBottomDivider:Z
-
-    return-void
 .end method

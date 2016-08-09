@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 19974
+    .line 19972
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/app/ActivityManagerInternal;-><init>()V
@@ -37,7 +37,7 @@
     .param p2, "x1"    # Lcom/android/server/am/ActivityManagerService$1;
 
     .prologue
-    .line 19974
+    .line 19972
     invoke-direct {p0, p1}, Lcom/android/server/am/ActivityManagerService$LocalService;-><init>(Lcom/android/server/am/ActivityManagerService;)V
 
     return-void
@@ -50,12 +50,12 @@
     .param p1, "wakefulness"    # I
 
     .prologue
-    .line 19977
+    .line 19975
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/ActivityManagerService;->onWakefulnessChanged(I)V
 
-    .line 19978
+    .line 19976
     return-void
 .end method
 
@@ -69,7 +69,7 @@
     .param p6, "crashHandler"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 19983
+    .line 19981
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     move-object v1, p1

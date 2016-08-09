@@ -30,7 +30,7 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 12014
+    .line 12012
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$16;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$16;->val$sb:Ljava/lang/StringBuilder;
@@ -50,12 +50,12 @@
     .locals 5
 
     .prologue
-    .line 12018
+    .line 12016
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$16;->val$sb:Ljava/lang/StringBuilder;
 
     monitor-enter v2
 
-    .line 12019
+    .line 12017
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$16;->val$sb:Ljava/lang/StringBuilder;
 
@@ -63,7 +63,7 @@
 
     move-result-object v0
 
-    .line 12020
+    .line 12018
     .local v0, "report":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$16;->val$sb:Ljava/lang/StringBuilder;
 
@@ -77,35 +77,35 @@
 
     invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 12021
+    .line 12019
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$16;->val$sb:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->trimToSize()V
 
-    .line 12022
+    .line 12020
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12023
+    .line 12021
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 12024
+    .line 12022
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$16;->val$dbox:Landroid/os/DropBoxManager;
 
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$16;->val$dropboxTag:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12026
+    .line 12024
     :cond_0
     return-void
 
-    .line 12022
+    .line 12020
     .end local v0    # "report":Ljava/lang/String;
     :catchall_0
     move-exception v1

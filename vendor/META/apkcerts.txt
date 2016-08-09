@@ -70,7 +70,6 @@ name="Shell.apk" certificate="build/security/platform.x509.pem" private_key="bui
 name="shutdownlistener.apk" certificate="build/security/platform.x509.pem" private_key="build/security/platform.pk8"
 name="SoundRecorder.apk" certificate="PRESIGNED" private_key=""
 name="Stk.apk" certificate="build/security/platform.x509.pem" private_key="build/security/platform.pk8"
-name="SuperSU.apk" certificate="PRESIGNED" private_key=""
 name="SystemUI.apk" certificate="build/security/platform.x509.pem" private_key="build/security/platform.pk8"
 name="Telecom.apk" certificate="build/security/platform.x509.pem" private_key="build/security/platform.pk8"
 name="TelephonyProvider.apk" certificate="build/security/platform.x509.pem" private_key="build/security/platform.pk8"

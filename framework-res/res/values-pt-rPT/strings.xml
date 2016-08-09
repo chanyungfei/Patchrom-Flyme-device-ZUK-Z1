@@ -60,7 +60,7 @@
     <string name="reboot_download">Download</string>
     <string name="reboot_soft">Reinicialização suave</string>
     <string name="reboot_title">Reiniciar</string>
-    <string name="reboot_confirm">O seu telemóvel irá reiniciar.</string>
+    <string name="reboot_confirm">O seu telefone irá reiniciar.</string>
     <string name="reboot_progress">A reiniciar…</string>
     <string name="app_killed_message">Aplicação terminada</string>
     <string name="adb_net_active_notification_title">ADB através da rede ativado</string>
@@ -109,7 +109,7 @@
     <string name="app_ops_send_sms">Enviar uma mensagem SMS</string>
     <string name="app_ops_start_at_bootup">iniciar no arranque</string>
     <string name="app_ops_toast_window">exibir avisos no ecrã</string>
-    <string name="app_ops_toggle_bluetooth">alternar bluetooth</string>
+    <string name="app_ops_toggle_bluetooth">ligar/desligar o bluetooth</string>
     <string name="app_ops_toggle_mobile_data">alternar dados móveis</string>
     <string name="app_ops_toggle_nfc">alternar NFC</string>
     <string name="app_ops_toggle_wifi">alternar Wi-Fi</string>

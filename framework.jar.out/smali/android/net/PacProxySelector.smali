@@ -33,10 +33,10 @@
     .locals 3
 
     .prologue
-    .line 48
+    .line 49
     invoke-direct {p0}, Ljava/net/ProxySelector;-><init>()V
 
-    .line 49
+    .line 50
     const-string v0, "com.android.net.IProxyService"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -49,19 +49,19 @@
 
     iput-object v0, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
 
-    .line 51
+    .line 52
     iget-object v0, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
 
     if-nez v0, :cond_0
 
-    .line 53
+    .line 54
     const-string v0, "PacProxySelector"
 
     const-string v1, "PacManager: no proxy service"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
+    .line 56
     :cond_0
     const/4 v0, 0x1
 
@@ -79,7 +79,7 @@
 
     iput-object v0, p0, Landroid/net/PacProxySelector;->mDefaultList:Ljava/util/List;
 
-    .line 56
+    .line 57
     return-void
 .end method
 
@@ -99,20 +99,20 @@
     .end annotation
 
     .prologue
-    .line 88
+    .line 97
     const-string v8, ";"
 
     invoke-virtual {p0, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 89
+    .line 98
     .local v6, "split":[Ljava/lang/String;
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v4
 
-    .line 90
+    .line 99
     .local v4, "ret":Ljava/util/List;, "Ljava/util/List<Ljava/net/Proxy;>;"
     move-object v0, v6
 
@@ -128,13 +128,13 @@
 
     aget-object v5, v0, v1
 
-    .line 91
+    .line 100
     .local v5, "s":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 92
+    .line 101
     .local v7, "trimmed":Ljava/lang/String;
     const-string v8, "DIRECT"
 
@@ -144,19 +144,19 @@
 
     if-eqz v8, :cond_1
 
-    .line 93
+    .line 102
     sget-object v8, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 
     invoke-interface {v4, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 90
+    .line 99
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 94
+    .line 103
     :cond_1
     const-string v8, "PROXY "
 
@@ -166,7 +166,7 @@
 
     if-eqz v8, :cond_2
 
-    .line 95
+    .line 104
     sget-object v8, Ljava/net/Proxy$Type;->HTTP:Ljava/net/Proxy$Type;
 
     const-string v9, "PROXY "
@@ -183,16 +183,16 @@
 
     move-result-object v3
 
-    .line 96
+    .line 105
     .local v3, "proxy":Ljava/net/Proxy;
     if-eqz v3, :cond_0
 
-    .line 97
+    .line 106
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 99
+    .line 108
     .end local v3    # "proxy":Ljava/net/Proxy;
     :cond_2
     const-string v8, "SOCKS "
@@ -203,7 +203,7 @@
 
     if-eqz v8, :cond_0
 
-    .line 100
+    .line 109
     sget-object v8, Ljava/net/Proxy$Type;->SOCKS:Ljava/net/Proxy$Type;
 
     const-string v9, "SOCKS "
@@ -220,16 +220,16 @@
 
     move-result-object v3
 
-    .line 101
+    .line 110
     .restart local v3    # "proxy":Ljava/net/Proxy;
     if-eqz v3, :cond_0
 
-    .line 102
+    .line 111
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 106
+    .line 115
     .end local v3    # "proxy":Ljava/net/Proxy;
     .end local v5    # "s":Ljava/lang/String;
     .end local v7    # "trimmed":Ljava/lang/String;
@@ -240,12 +240,12 @@
 
     if-nez v8, :cond_4
 
-    .line 107
+    .line 116
     sget-object v8, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 
     invoke-interface {v4, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 109
+    .line 118
     :cond_4
     return-object v4
 .end method
@@ -256,7 +256,7 @@
     .param p1, "hostPortString"    # Ljava/lang/String;
 
     .prologue
-    .line 114
+    .line 123
     :try_start_0
     const-string v4, ":"
 
@@ -264,13 +264,13 @@
 
     move-result-object v2
 
-    .line 115
+    .line 124
     .local v2, "hostPort":[Ljava/lang/String;
     const/4 v4, 0x0
 
     aget-object v1, v2, v4
 
-    .line 116
+    .line 125
     .local v1, "host":Ljava/lang/String;
     const/4 v4, 0x1
 
@@ -280,7 +280,7 @@
 
     move-result v3
 
-    .line 117
+    .line 126
     .local v3, "port":I
     new-instance v4, Ljava/net/Proxy;
 
@@ -293,18 +293,18 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 120
+    .line 129
     .end local v1    # "host":Ljava/lang/String;
     .end local v2    # "hostPort":[Ljava/lang/String;
     .end local v3    # "port":I
     :goto_0
     return-object v4
 
-    .line 118
+    .line 127
     :catch_0
     move-exception v0
 
-    .line 119
+    .line 128
     .local v0, "e":Ljava/lang/RuntimeException;
     :goto_1
     const-string v4, "PacProxySelector"
@@ -339,12 +339,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
+    .line 129
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 118
+    .line 127
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_1
     move-exception v0
@@ -361,12 +361,12 @@
     .param p3, "failure"    # Ljava/io/IOException;
 
     .prologue
-    .line 127
+    .line 136
     return-void
 .end method
 
 .method public select(Ljava/net/URI;)Ljava/util/List;
-    .locals 6
+    .locals 11
     .param p1, "uri"    # Ljava/net/URI;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -381,129 +381,191 @@
     .end annotation
 
     .prologue
-    .line 60
-    iget-object v3, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
-
-    if-nez v3, :cond_0
-
     .line 61
-    const-string v3, "com.android.net.IProxyService"
+    iget-object v1, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
 
-    invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+    if-nez v1, :cond_0
 
-    move-result-object v3
+    .line 62
+    const-string v1, "com.android.net.IProxyService"
 
-    invoke-static {v3}, Lcom/android/net/IProxyService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/net/IProxyService;
-
-    move-result-object v3
-
-    iput-object v3, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
-
-    .line 64
-    :cond_0
-    iget-object v3, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
-
-    if-nez v3, :cond_1
-
-    .line 65
-    const-string v3, "PacProxySelector"
-
-    const-string/jumbo v4, "select: no proxy service return NO_PROXY"
-
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 66
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/net/Proxy;
-
-    const/4 v4, 0x0
-
-    sget-object v5, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
-
-    aput-object v5, v3, v4
-
-    invoke-static {v3}, Lcom/google/android/collect/Lists;->newArrayList([Ljava/lang/Object;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    .line 84
-    :goto_0
-    return-object v3
-
-    .line 68
-    :cond_1
-    const/4 v1, 0x0
-
-    .line 71
-    .local v1, "response":Ljava/lang/String;
-    :try_start_0
-    invoke-virtual {p1}, Ljava/net/URI;->toURL()Ljava/net/URL;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/net/URL;->toString()Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v2
-
-    .line 76
-    .local v2, "urlString":Ljava/lang/String;
-    :goto_1
-    :try_start_1
-    iget-object v3, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
-
-    invoke-virtual {p1}, Ljava/net/URI;->getHost()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v3, v4, v2}, Lcom/android/net/IProxyService;->resolvePacFile(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 80
-    :goto_2
+    invoke-static {v1}, Lcom/android/net/IProxyService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/net/IProxyService;
+
+    move-result-object v1
+
+    iput-object v1, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
+
+    .line 65
+    :cond_0
+    iget-object v1, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
+
+    if-nez v1, :cond_1
+
+    .line 66
+    const-string v1, "PacProxySelector"
+
+    const-string/jumbo v2, "select: no proxy service return NO_PROXY"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 67
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/net/Proxy;
+
+    const/4 v2, 0x0
+
+    sget-object v3, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
+
+    aput-object v3, v1, v2
+
+    invoke-static {v1}, Lcom/google/android/collect/Lists;->newArrayList([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    .line 93
+    :goto_0
+    return-object v1
+
+    .line 69
+    :cond_1
+    const/4 v9, 0x0
+
+    .line 75
+    .local v9, "response":Ljava/lang/String;
+    :try_start_0
+    const-string v1, "http"
+
+    invoke-virtual {p1}, Ljava/net/URI;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
     if-nez v1, :cond_2
 
-    .line 81
-    iget-object v3, p0, Landroid/net/PacProxySelector;->mDefaultList:Ljava/util/List;
+    .line 76
+    new-instance v0, Ljava/net/URI;
 
-    goto :goto_0
+    invoke-virtual {p1}, Ljava/net/URI;->getScheme()Ljava/lang/String;
 
-    .line 72
-    .end local v2    # "urlString":Ljava/lang/String;
-    :catch_0
-    move-exception v0
+    move-result-object v1
 
-    .line 73
-    .local v0, "e":Ljava/net/MalformedURLException;
+    const/4 v2, 0x0
+
+    invoke-virtual {p1}, Ljava/net/URI;->getHost()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Ljava/net/URI;->getPort()I
+
+    move-result v4
+
+    const-string v5, "/"
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-direct/range {v0 .. v7}, Ljava/net/URI;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .end local p1    # "uri":Ljava/net/URI;
+    .local v0, "uri":Ljava/net/URI;
+    move-object p1, v0
+
+    .line 78
+    .end local v0    # "uri":Ljava/net/URI;
+    .restart local p1    # "uri":Ljava/net/URI;
+    :cond_2
+    invoke-virtual {p1}, Ljava/net/URI;->toURL()Ljava/net/URL;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/net/URL;->toString()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result-object v10
+
+    .line 85
+    .local v10, "urlString":Ljava/lang/String;
+    :goto_1
+    :try_start_1
+    iget-object v1, p0, Landroid/net/PacProxySelector;->mProxyService:Lcom/android/net/IProxyService;
+
     invoke-virtual {p1}, Ljava/net/URI;->getHost()Ljava/lang/String;
 
     move-result-object v2
 
-    .restart local v2    # "urlString":Ljava/lang/String;
+    invoke-interface {v1, v2, v10}, Lcom/android/net/IProxyService;->resolvePacFile(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_2
+
+    move-result-object v9
+
+    .line 89
+    :goto_2
+    if-nez v9, :cond_3
+
+    .line 90
+    iget-object v1, p0, Landroid/net/PacProxySelector;->mDefaultList:Ljava/util/List;
+
+    goto :goto_0
+
+    .line 79
+    .end local v10    # "urlString":Ljava/lang/String;
+    :catch_0
+    move-exception v8
+
+    .line 80
+    .local v8, "e":Ljava/net/URISyntaxException;
+    invoke-virtual {p1}, Ljava/net/URI;->getHost()Ljava/lang/String;
+
+    move-result-object v10
+
+    .line 83
+    .restart local v10    # "urlString":Ljava/lang/String;
     goto :goto_1
 
-    .line 77
-    .end local v0    # "e":Ljava/net/MalformedURLException;
+    .line 81
+    .end local v8    # "e":Ljava/net/URISyntaxException;
+    .end local v10    # "urlString":Ljava/lang/String;
     :catch_1
-    move-exception v0
+    move-exception v8
 
-    .line 78
-    .local v0, "e":Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    .line 82
+    .local v8, "e":Ljava/net/MalformedURLException;
+    invoke-virtual {p1}, Ljava/net/URI;->getHost()Ljava/lang/String;
+
+    move-result-object v10
+
+    .restart local v10    # "urlString":Ljava/lang/String;
+    goto :goto_1
+
+    .line 86
+    .end local v8    # "e":Ljava/net/MalformedURLException;
+    :catch_2
+    move-exception v8
+
+    .line 87
+    .local v8, "e":Landroid/os/RemoteException;
+    invoke-virtual {v8}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 84
-    .end local v0    # "e":Landroid/os/RemoteException;
-    :cond_2
-    invoke-static {v1}, Landroid/net/PacProxySelector;->parseResponse(Ljava/lang/String;)Ljava/util/List;
+    .line 93
+    .end local v8    # "e":Landroid/os/RemoteException;
+    :cond_3
+    invoke-static {v9}, Landroid/net/PacProxySelector;->parseResponse(Ljava/lang/String;)Ljava/util/List;
 
-    move-result-object v3
+    move-result-object v1
 
     goto :goto_0
 .end method

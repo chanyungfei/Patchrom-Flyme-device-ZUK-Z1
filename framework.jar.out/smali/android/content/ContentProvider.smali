@@ -10,7 +10,6 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/content/ContentProvider$PipeDataWriter;,
-        Landroid/content/ContentProvider$FlymeInjector;,
         Landroid/content/ContentProvider$Transport;
     }
 .end annotation
@@ -2646,13 +2645,4 @@
 .end method
 
 .method public abstract update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
-.end method
-
-.method flymeGetFieldMyUid()I
-    .locals 1
-
-    .prologue
-    iget v0, p0, Landroid/content/ContentProvider;->mMyUid:I
-
-    return v0
 .end method
